@@ -60,7 +60,6 @@ body,html {
 }
 #LC-Text p:nth-child(2){
     font-family: "Georgia", sans-serif;
-    /*font-style: italic;*/
     font-size: 3.5em;
     text-align: start;
     color: black;
@@ -84,7 +83,7 @@ body,html {
     border-radius: 50px 50px 0 0;
     height: max-content;
     margin: 3em 0 0 0;
-    padding: 1em 0.1em;
+    padding: 1em 2em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -92,6 +91,7 @@ body,html {
     font-family: sans-serif;
     font-weight: lighter;
     font-size: 25px;
+    max-width: 95vw;
 }
 #eventData h1 {
     text-align: center;
@@ -111,8 +111,10 @@ body,html {
 .dataItem p {
     margin-bottom: 0.25em;
 }
-.dataItem p:nth-child(3){
+.dataItem p:nth-child(4){
     font-weight: bold;
+    text-align: center;
+    margin-top: 0.5em;
 }
 
 .button {
@@ -122,7 +124,7 @@ body,html {
     border-radius: 30px;
     padding: 0.5em;
     color: black;
-    font-size: 2.75em;
+    font-size: 2em;
     margin-top: 0.5em;
     box-shadow: 5px 6px 10px #9a9a9a;
 }
@@ -162,6 +164,14 @@ body,html {
 .timePlaceContainer div:first-child{
     margin-right: 0.5em;
     max-width: 30%;
+    font-style: italic;
+    font-size: 0.8em;
+}
+#schedule {
+    font-size: 1.25em;
+    font-style: normal;
+    text-decoration: underline;
+    margin-right: 0.25em;
 }
 .timePlaceContainer div:first-child i {
     display: none;
@@ -246,6 +256,7 @@ body,html {
         margin-top: 1em;
         height: max-content;
         box-shadow: 0 6px 15px #7e7e7e;
+        max-width: none;
     }
     .timePlaceContainer {
         display: flex;
@@ -281,6 +292,7 @@ body,html {
     }
     #LC-map-container {
         transition-duration: 0.4s;
+        height: 170px;
     }
     #LC-map-container:hover {
         border: 9px solid #ecb222;
@@ -295,6 +307,7 @@ body,html {
         display: inline;
     }
     #location-title {
+        cursor: pointer;
         display: none;
         color: white;
         position: absolute;
@@ -308,6 +321,7 @@ body,html {
         margin-left: 1em;
     }
     .button {
+        cursor: pointer;
         width: 435px;
         border-radius: 15px;
         font-size: 1.1em;
@@ -324,12 +338,12 @@ body,html {
     .button i{
         padding: 0.1em 0 0.1em 0.1em;
         position: relative;
-        margin-left: -2em;
+        margin-left: -1em;
         z-index: 101;
         color: #20b255;
     }
     .button p{
-        margin-left: 2em;
+        margin-left: 0.75em;
     }
     .button span{
         z-index: 100;
@@ -337,7 +351,7 @@ body,html {
         background-color: white;
         height: 100px;
         margin-top: -1em;
-        margin-left: -4em;
+        margin-left: -2.5em;
         width: 85px;
         border-right: 2px solid black;
     }
@@ -366,65 +380,4 @@ body,html {
         text-align: justify;
         max-width: 400px;
     }
-}
-
-/*BIG screens*/
-@media (min-width: 1301px) {
-    /*.flex-container {*/
-    /*    !* We first create a flex layout context *!*/
-    /*    !*background-color: #ecb222;*!*/
-    /*    !*height: 100vh;*!*/
-    /*    !*position: fixed;*!*/
-    /*    !*height: 100%;*!*/
-    /*    !*top: 0;*!*/
-    /*    !*width: 100%;*!*/
-
-    /*    !* Then we define the flow direction*/
-    /*    and if we allow the items to wrap*/
-    /*    * Remember this is the same as:*/
-    /*    * flex-direction: row;*/
-    /*    * flex-wrap: wrap;*/
-    /*    *!*/
-    /*    !*flex-flow: column wrap;*!*/
-    /*    !* Then we define how is distributed the remaining space *!*/
-    /*    !*justify-content: space-around;*!*/
-    /*    !*list-style: none;*!*/
-
-    /*    !*----------- KEEP THIS ----------*!*/
-    /*    !*display: flex;*!*/
-    /*    !*flex-direction: row;*!*/
-
-    /*    !*--------- ALREADY ADDED ------------*!*/
-    /*    !*padding: 0;*!*/
-    /*    !*margin: 0;*!*/
-    /*    !*align-items: center;*!*/
-    /*}*/
-
-    /*#LC-Container {*/
-
-    /*    !*height: max-content;*!*/
-    /*    !*flex-direction: row;*!*/
-    /*    !*justify-content: flex-end;*!*/
-    /*}*/
-    /*#LC-Img {*/
-    /*    !*height: 250px;*!*/
-    /*    !*align-self: flex-end;*!*/
-    /*}*/
-
-    /*#LC-Text {*/
-    /*    !*line-height: 80px;*!*/
-    /*    !*padding-left: 0.5em;*!*/
-    /*    !*align-self: flex-end;*!*/
-    /*}*/
-
-    /*#LC-Text p:first-child{*/
-    /*}*/
-
-    /*#LC-Text p:nth-child(2){*/
-    /*}*/
-
-    /*#eventData {*/
-    /*    !*width: 80%;*!*/
-    /*    !*height: 250px;*!*/
-    /*}*/
 }
